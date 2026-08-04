@@ -41,11 +41,11 @@ Vamos focar agora um pouco no serviço Web.
 
 Ao tentar acessar o endereço Web através do IP fornecido chegamos a seguinte mensagem
 
-![[Pasted image 20260803214339.png]]
+![](Imagens/Pasted%20image%2020260803214339.png)
 
 Precisamos editar o `/etc/hosts` com o domínio fornecido. Após tal edição, chegamos a página web do servidor
 
-![[Pasted image 20260803214518.png]]
+![](Imagens/Pasted%20image%2020260803214518.png)
 
 Quero descobrir a versão do CMS utilizado, tentemos usar o utilitário `whatweb`
 
@@ -59,11 +59,11 @@ Observe que só nos retornou o nome do CMS, entretanto, não a versão que é o 
 
 Paralelamente ao `whatweb` rodei o `feroxbuster` na busca por diretórios, o que me retornou uma página de login interessante
 
-![[Pasted image 20260803220034.png]]
+![](Imagens/Pasted%20image%2020260803220034.png)
 
 Ao acessá-la, encontramos a resposta da próxima flag
 
-![[Pasted image 20260803220111.png]]
+![](Imagens/Pasted%20image%2020260803220111.png)
 
 Tendo a versão do CMS, vamos em busca de um exploit funcional. Após uma breve pesquisa no Google encontramos o [CVE-2025-32432](https://github.com/HeltonPojo/CVE-2025-32432).
 
@@ -100,36 +100,36 @@ $
 
 Quero descobrir o arquivo que possui a senha do banco de dados MySQL. Após uma breve pesquisada descobrimos:
 
-![[Pasted image 20260803224534.png]]
+![](Imagens/Pasted%20image%2020260803224534.png)
 
 Após algumas tentativas frustradas de conseguir conexão com o MySQL por falha minha, consegui abrir o banco de dados
 
-![[Pasted image 20260803234341.png]]
+![](Imagens/Pasted%20image%2020260803234341.png)
 
 Quebrando a senha via hashcat:
 
-![[Pasted image 20260803234709.png]]
+![](Imagens/Pasted%20image%2020260803234709.png)
 
 Com as credenciais obtidas, logo no SSH encontrado na enumeração inicial e consigo acesso a conta do adam, revelando a flag de user
 
-![[Pasted image 20260803234827.png]]
+![](Imagens/Pasted%20image%2020260803234827.png)
 
 Observação: o IP da máquina mudou pois eu precisei reinicia-la para usar no dia seguinte.
 
 Após conseguir acesso inicial a máquina queremos saber qual o serviço que somente pode ser acessado via orion, basta ver as portas abertas via `netstat -nlpt`
 
-![[Pasted image 20260804112636.png]]
+![](Imagens/Pasted%20image%2020260804112636.png)
 
 Observem que roda em loopback a porta 23, característica do telnet. Rapidamente descobrimos sua versão com `telnet --version`
 
-![[Pasted image 20260804113139.png]]
+![](Imagens/Pasted%20image%2020260804113139.png)
 
 O exercício nos dá a entender que a vulnerabilidade que devemos atacar é relacionada a essa versão do Telnet. Não seja por isso, após uma breve pesquisa sobre tal versão do Telnet, achamos um [artigo](https://medium.com/@shivam_bathla/telnetd-auth-bypass-to-root-f6e239d692b5) que aborda a vulnerabilidade explorada
 
 Após uma rápida leitura a exploração é muito simples, basta digitar o comando `USER="-f root" telnet -a 127.0.0.1 23`que receberemos uma shell de root.
 
-![[Pasted image 20260804114258.png]]
+![](Imagens/Pasted%20image%2020260804114258.png)
 
 Por fim, vamos até a pasta do root para receber a flag.
 
-![[Pasted image 20260804114327.png]]
+![](Imagens/Pasted%20image%2020260804114327.png)
