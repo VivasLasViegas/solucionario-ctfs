@@ -1,4 +1,4 @@
-Primeiro baixamos o material dadopelo exercício e encontramos os seguintes arquivos
+Primeiro baixamos o material dado pelo exercício e encontramos os seguintes arquivos
 
 ![](Imagens/Pasted%20image%2020260828214839.png)
 
