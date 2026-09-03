@@ -33,7 +33,7 @@ Nmap done: 1 IP address (1 host up) scanned in 10.58 seconds
 
 Abrindo no navegador encontramos o seguinte:
 
-![[Pasted image 20260903133025.png]]
+![](Imagens/Pasted%20image%2020260903133025.png)
 
 Uma página do Apache/Tomcat crua. Vamos tentar acessar o "Manager app" para vermos as configurações do site
 
@@ -41,7 +41,7 @@ Pediu a senha, vamos pesquisar as credenciais padrão do Apache na internet para
 
 
 Tentando (`tomcat`:`s3cret`) a página carrega
-![[Pasted image 20260903141553.png]]
+![](Imagens/Pasted%20image%2020260903141553.png)
 
 Vou usar o primeiro resultado.
 
