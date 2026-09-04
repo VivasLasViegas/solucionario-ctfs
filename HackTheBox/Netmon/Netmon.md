@@ -50,7 +50,7 @@ Nmap done: 1 IP address (1 host up) scanned in 19.30 seconds
 Entrando na fase da enumeração, vamos abordar a porta 80 que está aberta. Após abrir no navegador conseguimos ver o seguinte painel
 
 
-![[Pasted image 20260904091832.png]]
+![](Imagens/Pasted%20image%2020260904091832.png)
 
 Testamos as credenciais padrão `prtgadmin:prtadmin` mas não funcionou
 
@@ -247,13 +247,13 @@ ftp> get "PRTG Configuration.old.bak"
 
 Baixemos esse `PRTG Configuration.old.bak` e, após uma pesquisa, encontramos credenciais em texto claro.
 
-![[Pasted image 20260904103643.png]]
+![](Imagens/Pasted%20image%2020260904103643.png)
 
 OBS: os outros arquivos de configuração são semelhantes, porém, sem as credenciais em texto claro.
 
 Como não há um SSH, podemos tentar fazer login novamente no site com as credenciais encontradas, entretanto, deu login falho novamente! Porém, podemos testar novas senhas a partir da original (supondo que tenham atualizado). Testamos a variação `PrTg@dmin2019` e logou.
 
-![[Pasted image 20260904111242.png]]
+![](Imagens/Pasted%20image%2020260904111242.png)
 
 Agora podemos explorar um CVE que nos dê acesso.
 
