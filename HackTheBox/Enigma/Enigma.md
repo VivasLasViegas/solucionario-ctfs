@@ -546,7 +546,7 @@ Apenas do `snap-confine`ter muitas capacidades, ele não possui vetor claro de e
 
 O alvo também não é vulnerável a exploração do Kernel como `DirtyFrag` ou `CopyFail`, vamos ter que aprofundar a abordagem.
 
-## Verificando portas abertas.
+### Verificando portas abertas.
 
 Fiz um rápido scan no alvo e percebi que há algumas portas abertas em loopback
 
@@ -648,6 +648,8 @@ Nmap done: 1 IP address (1 host up) scanned in 37.93 seconds
 ```
 
 Há um http server aberto, vamos acessar via navegador. 
+
+## Exploração final
 
 Após fazer isso surgiu-me um dashboard do `OliveTin`, uma aplicação que já havia sido encontrada no alvo porém, sem sinais de execução
 
