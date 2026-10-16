@@ -1,6 +1,6 @@
 #ctfs 
 
-![[Pasted image 20261016125349.png|618]]
+![Capa do CTF Wifinetic](Imagens/Pasted%20image%2020261016125349.png)
 
 
 
@@ -426,5 +426,4 @@ Password:
 root@wifinetic:/usr/share/man/man8# cat /root/root.txt
 [flag root.txt]
 ```
-
 

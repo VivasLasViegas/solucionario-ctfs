@@ -1,5 +1,5 @@
 #ctfs 
-![[Pasted image 20261010121325.png]]
+![Capa do CTF Touch](Imagens/Pasted%20image%2020261010121325.png)
 
 
 Dados fornecidos:
@@ -60,7 +60,7 @@ Ao abrirmos o link no navegador nos deparamos com a seguinte página:
 
 `http://10.129.108.204:8443/login`
 
-![[Pasted image 20261010122247.png]]
+![Página de login do Nexion DeviceHub](Imagens/Pasted%20image%2020261010122247.png)
 
 Podemos iniciar com um scan de diretórios a fim de ver pastas escondidas no endereço do site
 
@@ -115,11 +115,11 @@ Podemos analisar a /status que retornou 200 e verificar o que foi encontrado
 
 `http://10.129.108.204:8443/api/status`
 
-![[Pasted image 20261015141211.png]]
+![Resposta do endpoint de status](Imagens/Pasted%20image%2020261015141211.png)
 
 Temos aqui um numero de série (`NX-DH-2024-B7042`)! Podemos testá-lo na página inicial novamente e conseguiremos acesso ao dashboard
 
-![[Pasted image 20261015141240.png]]
+![Dashboard do Nexion DeviceHub](Imagens/Pasted%20image%2020261015141240.png)
 
 Observe que tem um nome de usuário e uma senha expostos (`KioskUser`, `[senha]`), podemos tentar um login no RDP com essas credenciais encontradas.
 
@@ -129,14 +129,14 @@ Observe que tem um nome de usuário e uma senha expostos (`KioskUser`, `[senha]`
 
 Com isso, abre-se essa página no RDP:
 
-![[Pasted image 20261015145743.png]]
+![Aplicação acessada via RDP](Imagens/Pasted%20image%2020261015145743.png)
 
 Pede-se o código de reserva, o qual foi fornecido no enunciado do CTF
 
-![[Pasted image 20261015145850.png]]
+![Tela para inserir o código de reserva](Imagens/Pasted%20image%2020261015145850.png)
 
-![[Pasted image 20261015235959.png]]
+![Etapa do acesso ao sistema Touch](Imagens/Pasted%20image%2020261015235959.png)
 
-![[Pasted image 20261016000344.png]]
+![Etapa seguinte do acesso ao sistema Touch](Imagens/Pasted%20image%2020261016000344.png)
 
-![[Pasted image 20261016000415.png]]
+![Resultado do acesso ao sistema Touch](Imagens/Pasted%20image%2020261016000415.png)
